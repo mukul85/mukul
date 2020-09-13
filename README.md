@@ -26,33 +26,12 @@ I Like To Thank Them Always Mr White && Infotel (Infotell Is Latest) Who Made vi
 ## Installing Heroku 
 
 ### The Easy Way
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/spandey112/SensibleUserbot/)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mukul85/mukul/)
 
 Take Sting session from Replit
-[![Run on Repl.it](https://repl.it/badge/github/spandey112/SensibleUserbot)](https://stringsession.sensibleuserbot.repl.run/)
+[![Run on Repl.it](https://repl.it/badge/github/mukul85/mukul)]
 -------------------------------------------------
 
-🔺 How to Deploy your UserBot to Heroku 🔺
-
-So I have Updated This Things For Api Id Just GO To This Bot Click There t.me/ceoappid_bot
-1. Take APP ID AND HASH FROM Click There t.me/ceoappid_bot
-
-2. For String Session [👉Click here 👈](https://sensibleuserbotstringsession.spandey112.repl.run/)
-2.1 Wait For 2 Mins Until It Asks API ID 
-2.2 When It Ask Api Id And Hash Go To That Bot Which I Gived In Step 1 
-2.3 Then After That Enter Your Phone Number 
-2.4 It will Send A OTP Enter The Otp There
-2.5 Boom 💣 Your String Session Has Been Generated 
-
-3. Now Copy String Session
-
-4 Open this link https://github.com/spandey112/SensibleUserbot
-
-5. Click On Deploy app
-
-6. Make login to your heroku Account. 
-
-7. Then Fill 
 
      🔹    App name - with any name you want 
        
