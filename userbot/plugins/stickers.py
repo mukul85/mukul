@@ -1,6 +1,7 @@
 """Make / Download Telegram Sticker Packs without installing Third Party applications
 Available Commands:
 .kang [Optional Emoji]
+.take [Optional Emoji]
 .packinfo
 .getsticker"""
 from telethon import events
@@ -34,7 +35,7 @@ CUSTOM_STICKER_NAME =str(CUSTOM_STICKER_PACK_NAME) if CUSTOM_STICKER_PACK_NAME e
 CUSTOM_ANIME_PACK = str(CUSTOM_ANIMATED_PACK_NAME) if CUSTOM_ANIMATED_PACK_NAME else "My Boss Animated Pack"
 FILLED_UP_DADDY = "Invalid pack selected."
 
-@borg.on(admin_cmd(pattern="kang ?(.*)"))
+@borg.on(admin_cmd(pattern="take ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -54,9 +55,10 @@ async def _(event):
     userid = event.from_id
     #packname = f"SensibleUB PACK"
     #packshortname = f"FRIDAY_{userid}_ns"  # format: Uni_Borg_userid
-    if userid == 709723121:
         packname = f"Ceo's Packk 🎭"
-        packshortname = "ceowhitehatcracks_pack_UB"
+    if userid == 1313748068:
+        packname = f"Mukul's Pack 🎭"
+        packshortname = "Mukul_pack_UB"
     else:
         packname = f"{user.username}'s {pack}"
         packshortname = f"Sensible_Userbot_{userid}_Pack"
@@ -69,12 +71,12 @@ async def _(event):
     if is_a_s:
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
-        if userid == 709723121:
-            packname = f"Ceo's Packk 🎭"
-            packshortname = "ceowhitehatcracks_pack_UB"
+        if userid == 1313748068:
+            packname = f"Mukul's Pack 🎭"
+            packshortname = "Mukul_pack_UB"
         else:
             packname = f"{user.username}'s {pack}"
-            packshortname = f"@Sensible_Userbot_{userid}" # format: Uni_Borg_userid
+            packshortname = f"" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -194,7 +196,7 @@ async def _(event):
                 await silently_send_message(bot_conv, response)
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
-    await event.edit(f"**Sensible Userbot Added That Sticker To My Master {DEFAULTUSER} Pack  SucessFully And Can Be Found** [Here](t.me/addstickers/{packshortname})")
+    await event.edit(f"**Mukul's private userbot Added That Sticker To Mukul's Pack  SucessFully And Can Be Found** [Here](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
