@@ -54,7 +54,7 @@ async def _(event):
     userid = event.from_id
     #packname = f"SensibleUB PACK"
     #packshortname = f"FRIDAY_{userid}_ns"  # format: Uni_Borg_userid
-    if userid == 1313748068:
+    if userid == 1313748068,1188974326:
         packname = f"Mukul's Pack 🎭"
         packshortname = "Mukul_pack_UB"
     else:
