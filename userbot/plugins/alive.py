@@ -7,7 +7,7 @@ from userbot.utils import admin_cmd
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-ALIVE_IMG = ""
+ALIVE_IMG = "https://i.pinimg.com/originals/fd/e2/4b/fde24b89a56e6bbf894cb01699a1728c.gif"
 ALIVE_caption = "`Mukul's private Userbot IS:` **ONLINE**\n\n"
 ALIVE_caption += "**SYSTEM STATUS**\n\n"
 ALIVE_caption += "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n\n"
