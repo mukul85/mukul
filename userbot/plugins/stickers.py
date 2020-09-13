@@ -1,6 +1,5 @@
 """Make / Download Telegram Sticker Packs without installing Third Party applications
 Available Commands:
-.kang [Optional Emoji]
 .take [Optional Emoji]
 .packinfo
 .getsticker"""
@@ -55,7 +54,6 @@ async def _(event):
     userid = event.from_id
     #packname = f"SensibleUB PACK"
     #packshortname = f"FRIDAY_{userid}_ns"  # format: Uni_Borg_userid
-        packname = f"Ceo's Packk 🎭"
     if userid == 1313748068:
         packname = f"Mukul's Pack 🎭"
         packshortname = "Mukul_pack_UB"
