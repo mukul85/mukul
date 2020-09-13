@@ -29,7 +29,7 @@ I Like To Thank Them Always Mr White && Infotel (Infotell Is Latest) Who Made vi
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mukul85/mukul/)
 
 Take Sting session from Replit
-[![Run on Repl.it](https://repl.it/badge/github/mukul85/mukul)]
+[![Run on Repl.it](https://repl.it/badge/github/mukul85/mukul)
 -------------------------------------------------
 
 
