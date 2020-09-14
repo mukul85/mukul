@@ -97,8 +97,8 @@ if Var.PRIVATE_GROUP_ID is not None:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
                 await event.edit("Disapproved [{}](tg://user?id={})".format(firstname, chat.id))
-                
-    
+
+
 
     @command(pattern="^.listapproved")
     async def approve_p_m(event):
@@ -168,7 +168,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             # don't log verified accounts
 
             return
-          
+
         if any([x in event.raw_text for x in ("/start", "1", "2", "3", "4", "5")]):
             return
 
@@ -204,13 +204,13 @@ if Var.PRIVATE_GROUP_ID is not None:
                 return
             except:
                 return
-     if MOTDOG_PIC is none:
-        r = await event.client.send_file(event.chat_id, MOTDOG_PIC, caption=USER_BOT_NO_WARN)
+    if MOTDOG_PIC is None:
+        r =  await event.client.send_file(event.chat_id, MOTDOG_PIC, caption=USER_BOT_NO_WARN)
         PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
-     else
+    else:
         r = await event.client.send_file(event.chat_id, PMPERMIT_PIC, caption=USER_BOT_NO_WARN)
         PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
