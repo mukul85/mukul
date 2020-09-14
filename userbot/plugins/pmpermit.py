@@ -21,10 +21,9 @@ if PMPERMIT_PIC is None:
     if m==4:
         MOTDOG_PIC='https://i.pinimg.com/originals/c4/41/5c/c4415cfa0d065e82cfc060f69cdd650a.gif'
     if m==5:
-        MOTDOG_PIC='https://reactiongifs.me/wp-content/uploads/2018/06/Just-Sayin-Hi-_2cdc7.gif'
-
-
-        WARN_PIC = MOTDOG_PIC
+        MOTDOG_PIC='https://reactiongifs.me/wp-content/uploads/2018/06/Just-Sayin-Hi-_2cdc7.gif'#
+        #random values
+    WARN_PIC = MOTDOG_PIC
 else:
   WARN_PIC = PMPERMIT_PIC
 PM_WARNS = {}
