@@ -2,6 +2,7 @@ import os
 import time
 import asyncio
 import io
+import random
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
