@@ -205,7 +205,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             except:
                 return
     if MOTDOG_PIC is None:
-        r =  await event.client.send_file(event.chat_id, MOTDOG_PIC, caption=USER_BOT_NO_WARN)
+        r = await event.client.send_file(event.chat_id, MOTDOG_PIC, caption=USER_BOT_NO_WARN)
         PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
