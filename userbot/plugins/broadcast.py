@@ -5,7 +5,7 @@ import asyncio
 import datetime
 from telethon import events
 from var import Var
-from uniborg.util import admin_cmd, sudo_cmd, edit_or_reply
+from uniborg.util import admin_cmd,edit_or_reply
 from telethon.tl.types import (
     DocumentAttributeFilename,
     DocumentAttributeSticker,
@@ -23,7 +23,6 @@ logs_id = Var.PRIVATE_GROUP_ID
 
 
 @borg.on(admin_cmd("bforward ?(.*)"))
-@borg.on(sudo_cmd("bforward ?(.*)", allow_sudo=True))
 async def forw(event): 
   if event.fwd_from:
     return
@@ -64,7 +63,6 @@ async def forw(event):
     
     
 @borg.on(admin_cmd("broadcast ?(.*)"))
-@borg.on(sudo_cmd("broadcast ?(.*)", allow_sudo=True))
 async def _(event):
   if event.fwd_from:
         return
@@ -183,7 +181,6 @@ async def add_ch(event):
 
 
 @borg.on(admin_cmd("brm ?(.*)"))
-@borg.on(sudo_cmd("brm ?(.*)", allow_sudo=True))
 async def remove_ch(event):
     if event.fwd_from:
         return
@@ -212,7 +209,6 @@ async def remove_ch(event):
         await event.delete()
         
 @borg.on(admin_cmd("listchannels"))
-@borg.on(sudo_cmd("listchannels", allow_sudo=True))
 async def list(event):
     if event.fwd_from:
         return

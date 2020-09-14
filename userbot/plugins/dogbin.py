@@ -5,7 +5,7 @@ import asyncio
 from datetime import datetime
 import os
 import requests
-from userbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from userbot.utils import admin_cmd,edit_or_reply
 
 
 def progress(current, total):
@@ -13,7 +13,6 @@ def progress(current, total):
 
 
 @borg.on(admin_cmd("paste ?(.*)"))
-@borg.on(sudo_cmd("paste ?(.*)", allow_sudo=True))
 async def _(event):
     mepaste = await edit_or_reply(event, "Pasting This...")
     if event.fwd_from:

@@ -2,7 +2,7 @@
 import os
 import lyricsgenius
 import random
-from userbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from userbot.utils import admin_cmd, edit_or_reply
 from userbot import CMD_HELP, LOGS
 from tswift import Song
 from telethon import events
@@ -17,7 +17,6 @@ GENIUS = os.environ.get("GENIUS_API_TOKEN", None)
 
 
 @borg.on(admin_cmd(outgoing=True, pattern="lyrics (.*)"))
-@borg.on(sudo_cmd(pattern="lyrics (.*)", allow_sudo=True))
 async def _(event):
     await edit_or_reply(event, "Searching For Lyrics.....")
     reply_to_id = event.message.id
