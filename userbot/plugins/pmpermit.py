@@ -10,10 +10,20 @@ from userbot.utils import admin_cmd
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 if PMPERMIT_PIC is None:
-  WARN_PIC = "https://i.pinimg.com/originals/fd/e2/4b/fde24b89a56e6bbf894cb01699a1728c.gif"
+    m=(random.randrange(1,5))
+    if m==1:
+        MOTDOG_PIC='https://media.tenor.com/images/ab604ce14313c4a0eadd296e78c4839d/tenor.gif'
+    if m==2:
+        MOTDOG_PIC='https://i.pinimg.com/originals/0d/bd/bc/0dbdbc0eddd3cdf8829712ba59effe11.gif'
+    if m==3:
+        MOTDOG_PIC='https://www.reactiongifs.com/r/hello-bear.gif'
+    if m==4:
+        MOTDOG_PIC='https://i.pinimg.com/originals/c4/41/5c/c4415cfa0d065e82cfc060f69cdd650a.gif'
+    if m==5:
+        MOTDOG_PIC='https://reactiongifs.me/wp-content/uploads/2018/06/Just-Sayin-Hi-_2cdc7.gif'
+        WARN_PIC = MOTDOG_PIC
 else:
   WARN_PIC = PMPERMIT_PIC
-
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
