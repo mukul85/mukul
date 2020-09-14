@@ -5,7 +5,7 @@ from telethon import events
 from userbot.utils import admin_cmd
 import asyncio
 import random
-from userbot import CMD_HELP, fonts
+from userbot.helper import CMD_HELP, fonts
 
 
 
