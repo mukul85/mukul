@@ -52,7 +52,7 @@ async def _(event):
         user.username = user.id
     pack = 1
     userid = event.from_id
-    if userid == (1313748068,1188974326):
+    if userid == 1313748068 or 1188974326:
         packname = f"Mukul's Pack 🎭"
         packshortname = "Mukul_pack_UB"
     else:
@@ -362,9 +362,6 @@ async def stickerset_exists(conv, setname):
 
 
 def resize_image(image, save_locaton):
-    """ Copyright Rhyse Simpson:
-        https://github.com/skittles9823/SkittBot/blob/master/tg_bot/modules/stickers.py
-    """
     im = Image.open(image)
     maxsize = (512, 512)
     if (im.width and im.height) < 512:
