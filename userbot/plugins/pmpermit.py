@@ -6,7 +6,6 @@ import random
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
-from userbot import ALIVE_NAME, CUSTOM_PMPERMIT
 from userbot.utils import admin_cmd
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
@@ -203,21 +202,17 @@ if Var.PRIVATE_GROUP_ID is not None:
                 )
                 return
             except:
-                
-                if MOTDOG_PIC is None: 
-                    return
+
+             if MOTDOG_PIC is None:
                     r= await event.client.send_file(event.chat_id, MOTDOG_PIC, caption=USER_BOT_NO_WARN)
                     PM_WARNS[chat_id] += 1
                     if chat_id in PREV_REPLY_MESSAGE:
-                     await PREV_REPLY_MESSAGE[chat_id].delete()
-                    PREV_REPLY_MESSAGE[chat_id] = r
-                else:
-                    return
+                        await PREV_REPLY_MESSAGE[chat_id].delete()
+             else:
                 r = await event.client.send_file(event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN)
                 PM_WARNS[chat_id] += 1
                 if chat_id in PREV_REPLY_MESSAGE:
-                 await PREV_REPLY_MESSAGE[chat_id].delete()
-                PREV_REPLY_MESSAGE[chat_id] = r
+                    await PREV_REPLY_MESSAGE[chat_id].delete()
 
 
 from userbot.utils import admin_cmd
