@@ -217,12 +217,17 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await PREV_REPLY_MESSAGE[chat_id].delete()
 =======
                 return
+<<<<<<< HEAD
     if MOTDOG_PIC is None:
         r = await event.client.send_file(event.chat_id, MOTDOG_PIC, caption=USER_BOT_NO_WARN)
+=======
+        r = await event.client.send_file(event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN)
+>>>>>>> parent of 0ff6ad2... Update pmpermit.py
         PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
+<<<<<<< HEAD
     else:
         r = await event.client.send_file(event.chat_id, PMPERMIT_PIC, caption=USER_BOT_NO_WARN)
         PM_WARNS[chat_id] += 1
@@ -231,6 +236,8 @@ if Var.PRIVATE_GROUP_ID is not None:
         PREV_REPLY_MESSAGE[chat_id] = r
 >>>>>>> parent of a929833... Update pmpermit.py
 
+=======
+>>>>>>> parent of 0ff6ad2... Update pmpermit.py
 
 from userbot.utils import admin_cmd
 import io
