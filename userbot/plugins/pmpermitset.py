@@ -15,11 +15,12 @@ async def variable(var):
         return await var.edit("`[HEROKU]:"
                               "\nPlease setup your` **HEROKU_APP_NAME**")
     exe = var.pattern_match.group(1)
-    if exe == "pmpermitset":
+    heroku_var = app.config()
+    if exe == ".pmpermitset":
         await var.edit("`Setting pmpermit...`")
         variable = PMPERMIT_PIC
         if not variable:
-            return await var.edit(">`.set var <value>`")
+            return await var.edit(">`.pmpermitset var <value>`")
         value = var.pattern_match.group(2)
         if not value:
             variable = variable.split()[0]
