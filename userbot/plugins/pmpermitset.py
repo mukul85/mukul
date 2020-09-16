@@ -16,21 +16,14 @@ async def variable(var):
                               "\nPlease setup your` **HEROKU_APP_NAME**")
     exe = var.pattern_match.group(1)
     heroku_var = app.config()
-    if exe == ".pmpermitset":
+    if exe == "pmpermitset":
         await var.edit("`Setting pmpermit...`")
-        variable = PMPERMIT_PIC
-        if not variable:
-            return await var.edit(">`.pmpermitset var <value>`")
         value = var.pattern_match.group(2)
         if not value:
-            variable = variable.split()[0]
-            try:
-                value = var.pattern_match.group(2).split()[1]
-            except IndexError:
-                return await var.edit(">`.set var <ConfigVars-name> <value>`")
+                return await var.edit(">`.pmpermitset <value>`")
         await asyncio.sleep(1.5)
-        if variable in heroku_var:
-            await var.edit(f"**{variable}**  `successfully changed to`  ->  **{value}**")
+        if PMPERMIT_PIC in heroku_var:
+            await var.edit(f"**{PMPERMIT_PIC}**  `successfully changed to`  ->  **{value}**")
         else:
-            await var.edit(f"**{variable}**  `successfully added with value`  ->  **{value}**")
-        heroku_var[variable] = value
+            await var.edit(f"**{PMPERMIT_PIC}**  `successfully added with value`  ->  **{value}**")
+        heroku_var[PMPERMIT_PIC] = value
