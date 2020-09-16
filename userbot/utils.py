@@ -353,7 +353,7 @@ class Loader():
     def __init__(self, func=None, **args):
         self.Var = Var
         bot.add_event_handler(func, events.NewMessage(**args)
-async def edit_or_reply(event, text):
+def edit_or_reply(event, text):
     if event.from_id in Config.SUDO_USERS:
         reply_to = await event.get_reply_message()
         if reply_to:
