@@ -61,7 +61,7 @@ async def sticklet(event):
     except:
         pass
 
-    
+
 @borg.on(admin_cmd(pattern="stcr ?(?:(.*?) \| )?(.*)", allow_sudo=True))
 async def sticklet(event):
     R = random.randint(0,256)
@@ -104,13 +104,13 @@ async def sticklet(event):
     image.save(image_stream, "WebP")
     image_stream.seek(0)
     # finally, reply the sticker
-    await event.client.send_file(event.chat_id, image_stream, caption="Created Using Sensible Userbot", reply_to=event.message.reply_to_msg_id)
+    await event.client.send_file(event.chat_id, image_stream, caption="Created Using Mukul's private Userbot", reply_to=event.message.reply_to_msg_id)
     # cleanup
     try:
         os.remove(FONT_FILE)
     except:
         pass
-    
+
 async def get_font_file(client, channel_id, search_kw=""):
     # first get the font messages
     font_file_message_s = await client.get_messages(
