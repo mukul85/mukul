@@ -125,7 +125,7 @@ async def on_afk(event):
         message_to_reply = f"My Master Has Been Gone For {afk_since}\nWhere He Is: **It's A Secret 🤫** " + \
             f"\n\n__ He'll back in few eternities__\n**REASON**: {reason}" \
             if reason \
-            else f"**Important Notice**\n\n This User Is Dead Forever... }"
+            else f"**Important Notice**\n\n This User Is Dead Forever... "
         msg = await event.client.send_file(event.chat_id, IMAGE_OF_DEATH, caption=message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
