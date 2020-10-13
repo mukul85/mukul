@@ -72,7 +72,10 @@ if Var.PRIVATE_GROUP_ID is not None:
         reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
-          if chat.id == 1188974326 or 1313748068:
+          if chat.id == 1188974326:
+            await event.edit("Why You tried to block my Creator, I Dont Like That now i will sleep for 100 seconds")
+            await asyncio.sleep(100)
+          elif chat.id == 1313748068:
             await event.edit("Why You tried to block my Creator, I Dont Like That now i will sleep for 100 seconds")
             await asyncio.sleep(100)
           else:
