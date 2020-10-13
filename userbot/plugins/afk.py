@@ -12,7 +12,7 @@ global last_afk_message  # pylint:disable=E0602
 USER_AFK = {}
 afk_time = None
 last_afk_message = {}
-IMAGE_OF_DEATH = "https://telegra.ph//file/a53fa950ff31781d5930a.jpg":
+IMAGE_OF_DEATH = 'https://telegra.ph//file/a53fa950ff31781d5930a.jpg'
 
 
 @borg.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
